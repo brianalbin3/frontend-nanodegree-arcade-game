@@ -32,14 +32,18 @@ Entity.prototype.setYPos = function(yPos) {
     this._yPos = yPos;
 }
 
+// Template Method
 Entity.prototype.update = function() {
 
 }
 
 Entity.prototype.render = function() {
-
+    ctx.drawImage(Resources.get(this._sprite), this._xPos, this._yPos);
 }
 
+// Template Method
 Entity.prototype.collisionDetected = function(entityCollidedWith) {
 
 }
+
+// TODO: Move move methods from enemy/player in here
