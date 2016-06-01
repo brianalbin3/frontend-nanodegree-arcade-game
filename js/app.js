@@ -1,12 +1,17 @@
 // Enemies our player must avoid
+
 var Enemy = function(initialRow, initialColumn, initialSpeed) {
 
-    this._sprite = 'images/enemy-bug.png';
+    Entity.call(this);
+    this._sprite = "images/enemy-bug.png";
 
     this._xPos = initialRow *  101;
     this._yPos = initialColumn * 83 - 13;
     this._speed = initialSpeed;
 };
+
+Enemy.prototype = Object.create(Entity.prototype);
+Enemy.prototype.constructor = Enemy;
 
 //TODO: IMPLEMENT THIS
 // Update the enemy's position, required method for game
@@ -19,14 +24,6 @@ Enemy.prototype.update = function(dt) {
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this._sprite), this._xPos, this._yPos);
 };
-
-Enemy.prototype.getXPos = function() {
-    return this._xPos;
-}
-
-Enemy.prototype.getYPos = function() {
-    return this._yPos;
-}
 
 Enemy.prototype.moveRight = function(dist) {
     this._xPos += dist;
@@ -41,6 +38,8 @@ Enemy.prototype.moveRight = function(dist) {
 // This class requires an update(), render() and
 // a handleInput() method.
 var Player = function() {
+    Entity.call(this);
+
     this._sprite = 'images/char-boy.png';
 
     // Coordinates start at 0,0 which points to the top left square of the board
@@ -56,6 +55,9 @@ var Player = function() {
 
     this._keyPressed = "";
 }
+
+Player.prototype = Object.create(Entity.prototype);
+Player.prototype.constructor = Enemy;
 
 Player.prototype.update = function() {
     switch (this._keyPressed ) {
@@ -94,14 +96,6 @@ Player.prototype.handleInput = function( keyPressed ) {
     this._keyPressed = keyPressed;
 }
 
-Player.prototype.getXPos = function() {
-    return this._xPos;
-}
-
-Player.prototype.getYPos = function() {
-    return this._yPos;
-}
-
 Player.prototype.collisionDetected = function() {
     this.resetPosition();
 }
@@ -134,7 +128,6 @@ Player.prototype.moveDown = function() {
         this._yPos++;
     }
 }
-
 
 // TODO: BELOW
 // Now instantiate your objects.
