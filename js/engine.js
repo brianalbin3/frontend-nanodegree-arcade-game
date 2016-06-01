@@ -79,8 +79,8 @@ var Engine = (function(global) {
      * on the entities themselves within your app.js file).
      */
     function update(dt) {
+        checkCollisions();
         updateEntities(dt);
-        // checkCollisions();
     }
 
     /* This is called by the update function and loops through all of the
@@ -95,6 +95,25 @@ var Engine = (function(global) {
             enemy.update(dt);
         });
         player.update();
+    }
+
+    //TODO: MAGIC NUMBERS - AND STOP CONFUSING XPOS WITH COLUMNS
+    /* Determines if the player collided with any enemies.
+     */
+    function checkCollisions() {
+        let playerXPos = player.getXPos() * 101;
+        let playerYPos = player.getYPos() * 83 - 13;
+
+        allEnemies.forEach(function(enemy) {
+
+            // TODO: EXPLAIN THIS BETTER
+            if ( enemy.getYPos() == playerYPos ) {
+                if ( ( enemy.getXPos() >= playerXPos && enemy.getXPos() <= playerXPos + 101 )  ||
+                     (  enemy.getXPos() + 101 >= playerXPos  && enemy.getXPos() + 101 <= playerXPos + 101 ) ) {
+                    player.collisionDetected(); // I don't want to reset the game. Was thinking could add the concept of lives in the future
+                }
+            }
+        });
     }
 
     /* This function initially draws the "game level", it will then call
