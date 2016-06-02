@@ -1,4 +1,4 @@
-// EntityManager manages all entities. TODO: Use composite pattern?
+// EntityManager manages all entities.
 var EntityManager = function() {
     this._entities = [];
 }

@@ -1,6 +1,20 @@
-frontend-nanodegree-arcade-game
-===============================
+# Frogger Arcade Game Clone
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission.
+## Description
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+This is a ripoff of the game frogger.
+
+## Install
+
+Open index.html in your web browser to begin!
+
+## How to Play
+
+The objective is to cross the grass and stone road to get to the river. But beware of the ladybugs! If you touch one, you will be moved back to the starting position.
+
+### Controls
+
+- **Up Arrow** to move forward
+- **Down Arrow** to move down one square.
+- **Left Arrow** to move left one square
+- **Right Arrow** to move right one square
