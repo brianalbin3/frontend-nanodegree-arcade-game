@@ -6,7 +6,8 @@ This is a ripoff of the game frogger.
 
 ## Install
 
-Open index.html in your web browser to begin!
+
+Download from https://github.com/brianalbin3/frontend-nanodegree-arcade-game then open index.html in your web browser to begin!
 
 ## How to Play
 

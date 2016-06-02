@@ -25,4 +25,4 @@ Enemy.prototype.moveRight = function(dist) {
     if ( this._xPos >= 101 + 505 ) {
         this._xPos = -101; // Start them in the imaginary column before the first
     }
-}
+};

@@ -14,7 +14,7 @@ var Player = function() {
     this.resetPosition();
 
     this._keyPressed = "";
-}
+};
 
 Player.prototype = Object.create(Entity.prototype);
 Player.prototype.constructor = Player;
@@ -47,41 +47,41 @@ Player.prototype.update = function(dt) {
     }
 
     this._keyPressed = "";
-}
+};
 
 Player.prototype.handleInput = function( keyPressed ) {
     this._keyPressed = keyPressed;
-}
+};
 
 Player.prototype.collisionDetected = function(entityCollidedWith) {
     this.resetPosition();
-}
+};
 
 Player.prototype.resetPosition = function () {
     this._xPos = this._INITIAL_X_POS;
     this._yPos = this._INITIAL_Y_POS;
-}
+};
 
 Player.prototype.moveLeft = function(dist) {
     if ( this._xPos > this._MIN_X_POS ) {
         this._xPos -= dist;
     }
-}
+};
 
 Player.prototype.moveUp = function(dist) {
     if ( this._yPos > this._MIN_Y_POS ) {
         this._yPos -= dist;
     }
-}
+};
 
 Player.prototype.moveRight = function(dist) {
     if ( this._xPos < this._MAX_X_POS ) {
         this._xPos += dist;
     }
-}
+};
 
 Player.prototype.moveDown = function(dist) {
     if ( this._yPos < this._MAX_Y_POS ) {
         this._yPos += dist;
     }
-}
+};

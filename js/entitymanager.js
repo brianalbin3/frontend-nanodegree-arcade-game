@@ -1,7 +1,7 @@
 // EntityManager manages all entities.
 var EntityManager = function() {
     this._entities = [];
-}
+};
 
 EntityManager.prototype.add = function(newEntity) {
     this._entities.push(newEntity);
@@ -9,7 +9,7 @@ EntityManager.prototype.add = function(newEntity) {
 
 EntityManager.prototype.remove = function(entity) {
     // TODO
-}
+};
 
 EntityManager.prototype.update = function(dt) {
     let numEnts = this._entities.length;
@@ -17,7 +17,7 @@ EntityManager.prototype.update = function(dt) {
     for (let i = 0; i < numEnts; i++) {
         this._entities[i].update(dt);
     }
-}
+};
 
 EntityManager.prototype.render = function() {
     let numEnts = this._entities.length;
@@ -25,7 +25,7 @@ EntityManager.prototype.render = function() {
     for (let i = 0; i < numEnts; i++) {
         this._entities[i].render();
     }
-}
+};
 
 EntityManager.prototype.checkCollisions = function() {
     let numEnts = this._entities.length;
@@ -53,4 +53,4 @@ EntityManager.prototype.checkCollisions = function() {
             }
         }
     }
-}
+};
