@@ -2,12 +2,11 @@
 
 ## Description
 
-This is a ripoff of the game frogger.
+This is a ripoff of the game frogger. I took an engine created by someone else and created the game logic and player/enemy movement as well as expanded the engine to include collision detection amount other changes.
 
 ## Install
 
-
-Download from https://github.com/brianalbin3/frontend-nanodegree-arcade-game then open index.html in your web browser to begin!
+Download from [here](https://github.com/brianalbin3/frontend-nanodegree-arcade-game) then open index.html in your web browser to begin!
 
 ## How to Play
 
