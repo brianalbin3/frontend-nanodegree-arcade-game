@@ -46,7 +46,7 @@ EntityManager.prototype.checkCollisions = function() {
                 // TODO: Get rid of magic numbers
                 // TODO: I feel like collision detection algorithms really belong in the engine... but can leave here for now
                 if ( ( currEnt.getXPos() >= currOtherEnt.getXPos() && currEnt.getXPos() <= currOtherEnt.getXPos() + 101 ) ||
-                     ( currEnt.getXPos() + 101 >= currOtherEnt.getXPos && currEnt.getXPos() + 101 <= currEnt.getXPos() + 101 ) ) {
+                     ( currEnt.getXPos() + 101 >= currOtherEnt.getXPos() && currEnt.getXPos() + 101 <= currEnt.getXPos() + 101 ) ) {
                     currEnt.collisionDetected();
                     currOtherEnt.collisionDetected();
                 }
